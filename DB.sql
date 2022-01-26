@@ -12,7 +12,7 @@ CREATE TABLE CIUDAD(
 
 CREATE TABLE CONTRATO(
     nro_contrato INT PRIMARY KEY NOT NULL,
-    descrip_cntrato TEXT NOT NULL
+    descrip_contrato TEXT NOT NULL
 );
 
 CREATE TABLE CLIENTE(
