@@ -40,12 +40,12 @@ CREATE TABLE PRODUCTO(
     cod_producto INT PRIMARY KEY NOT NULL,
     nb_producto CHAR(50) NOT NULL UNIQUE,
     descripcion TEXT NOT NULL,
-    cod_tipo_producto INT NOT NULL
+    cod_tipo_producto INT NOT NULL,
+    calificacion INT NOT NULL
 );
 
 CREATE TABLE RECOMIENDA(
     cod_cliente INT NOT NULL,
-    calificacion INT NOT NULL,
     recomienda_amigo BOOLEAN NOT NULL,
     cod_evaluacion_servicio INT NOT NULL,
     cod_producto INT NOT NULL
