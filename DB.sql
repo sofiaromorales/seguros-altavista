@@ -17,8 +17,8 @@ CREATE TABLE CONTRATO(
 
 CREATE TABLE CLIENTE(
     cod_cliente INT PRIMARY KEY NOT NULL,
-    nro_documento INT NOT NULL,
-    telefono INT NOT NULL,
+    nro_documento BIGINT NOT NULL,
+    telefono BIGINT NOT NULL,
     sexo CHAR(5) NOT NULL,
     nb_cliente CHAR(50) NOT NULL,
     email CHAR(50) NOT NULL,
