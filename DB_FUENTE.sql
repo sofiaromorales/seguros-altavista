@@ -1,6 +1,6 @@
 --CREATE DATABASE SEGUROS_ALTAVISTA;
 
-CREATE SCHEMA BI_FUENTE;
+CREATE SCHEMA IF NOT EXISTS BI_FUENTE;
 
 CREATE TYPE estados_contrato
     AS ENUM ('activo', 'vencido', 'suspendido')
