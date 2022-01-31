@@ -18,8 +18,6 @@ values (1500, 'activo', '2022-02-01', '2023-02-01', 8, 1, 8);
 insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
 values (1300, 'vencido', '2021-01-01', '2022-01-01', 9, 3, 9);
 insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
-values (1300, 'activo', '2022-01-01', '2023-01-01', 9, 3, 9);
-insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
 values (1100, 'vencido', '2022-01-14', '2023-01-14', 10, 3, 10);
 insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
 values (1000, 'suspendido', '2022-01-14', '2022-01-20', 11, 3, 11);
@@ -82,7 +80,7 @@ values (2000, 'activo', '2021-10-01', '2022-10-01', 39, 2, 39);
 insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
 values (1800, 'activo', '2022-01-01', '2023-01-01', 40, 2, 40);
 insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
-values (2500, 'suspendido', '2022-01-01', '2022-02-01', 41, 1, 74);
+values (2500, 'suspendido', '2022-01-01', '2022-02-01', 41, 1, 41);
 insert into BI_FUENTE.REGISTRO_CONTRATO (monto, estado_contrato, fecha_inicio, fecha_fin, nro_contrato, cod_producto, cod_cliente) 
 values (3000, 'activo', '2022-01-01', '2023-01-01', 42, 3, 42);
 
