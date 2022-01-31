@@ -83,7 +83,7 @@ insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (42, 'Con
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato) 
     values (1,'21-10-2021' ,'15-01-2022' , true, 0, 200, 37);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato) 
-    values (2,'01-05-2020' ,'15-09-2020' , fale, 500, 500, 7);
+    values (2,'01-05-2020' ,'15-09-2020' , false, 500, 500, 7);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato) 
     values (3,'25-04-2021' ,'15-05-2021' , false, 600, 800, 8);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato) 
