@@ -36,6 +36,7 @@ insert into BI_FUENTE.PRODUCTO (cod_producto, nb_producto, descripcion, cod_tipo
     values (15, 'Dependencia', 'Cubre a los clientes que tengan algún tipo de limitación física o psíquica diagnosticada, a causa de la cual necesiten una persona que les asista', 2, 2);
 
 --CONTRATO
+set datestyle = dmy;
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (1, 'Contrato de Celia Domingo por un seguro de automóvil');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (2, 'Contrato de Leonardo Lebrón por un seguro de asistencia de viaje');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (3, 'Contrato de Martin Jon Olivera por un seguro de automóvil');
