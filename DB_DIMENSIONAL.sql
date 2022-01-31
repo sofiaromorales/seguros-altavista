@@ -1,49 +1,68 @@
 CREATE SCHEMA BI_DIMENSIONAL;
 
 --DIM--
+
 CREATE TABLE BI_DIMENSIONAL.DIM_CLIENTE(
     sk_dim_cliente_int SERIAL PRIMARY KEY NOT NULL,
+    version INT,
     cod_cliente INT,
     nro_documento BIGINT,
     telefono BIGINT,
     sexo CHAR(5),
     nb_cliente CHAR(50),
     email CHAR(50),
-    direccion TEXT
+    direccion TEXT,
+    from_date DATE,
+    to_date DATE
 );
 
 CREATE TABLE BI_DIMENSIONAL.DIM_CONTRATO(
     sk_dim_contrato SERIAL PRIMARY KEY NOT NULL,
+    version INT,
     nro_contrato INT,
-    descrip_contrato TEXT
+    descrip_contrato TEXT,
+    from_date DATE,
+    to_date DATE
 );
 
 CREATE TABLE BI_DIMENSIONAL.DIM_ESTADO_CONTRATO(
     sk_dim_estado_contrato SERIAL PRIMARY KEY NOT NULL,
+    version INT,
     cod_estado INT,
-    descrip_estado CHAR(25)
+    descrip_estado CHAR(25),
+    from_date DATE,
+    to_date DATE
 );
 
 CREATE TABLE BI_DIMENSIONAL.DIM_EVALUACION_SERVICIO(
     sk_dim_evaluacion_servicio SERIAL PRIMARY KEY NOT NULL,
+    version INT,
     cod_evaluacion_servicio INT,
-    nb_descripcion CHAR(25)
+    nb_descripcion CHAR(25),
+    from_date DATE,
+    to_date DATE
 );
 
 CREATE TABLE BI_DIMENSIONAL.DIM_PRODUCTO(
     sk_dim_producto SERIAL PRIMARY KEY NOT NULL,
     cod_producto INT,
+    version INT,
     nb_producto CHAR(25),
     descripcion TEXT,
     cod_tipo_producto INT,
     nb_tipo_producto CHAR(25),
-    calificacion INT
+    calificacion INT,
+    from_date DATE,
+    to_date DATE
 );
 
 CREATE TABLE BI_DIMENSIONAL.DIM_SINIESTRO(
     sk_dim_siniestro SERIAL PRIMARY KEY NOT NULL,
     nro_siniestro INT,
-    descrip_siniestro TEXT
+    version INT,
+    descrip_siniestro TEXT,
+    from_date DATE,
+    to_date DATE
 );
 
 CREATE TABLE BI_DIMENSIONAL.DIM_TIEMPO(
@@ -58,10 +77,14 @@ CREATE TABLE BI_DIMENSIONAL.DIM_TIEMPO(
     desc_dia_semana_corta INT,
     desc_trimestre INT,
     desc_semectre INT,
-    fecha_completa DATE
+    version INT,
+    fecha_completa DATE,
+    from_date DATE,
+    to_date DATE
 );
 
 --FACTS--
+
 CREATE TABLE BI_DIMENSIONAL.FACT_EVALUACION_SERVICIO(
     sk_dim_tiempo_recomendacion INT,
     sk_dim_cliente INT,
