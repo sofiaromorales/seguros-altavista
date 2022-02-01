@@ -38,19 +38,20 @@ insert into BI_FUENTE.PRODUCTO (cod_producto, nb_producto, descripcion, cod_tipo
     values (15, 'Dependencia', 'Cubre a los clientes que tengan algún tipo de limitación física o psíquica diagnosticada, a causa de la cual necesiten una persona que les asista', 2, 2);
 
 --CONTRATO
-insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (1, 'Contrato de Celia Domingo por un seguro de asistencia de viaje');
+set datestyle = dmy;
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (1, 'Contrato de Celia Domingo por un seguro de automóvil');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (2, 'Contrato de Leonardo Lebrón por un seguro de asistencia de viaje');
-insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (3, 'Contrato de Martin Jon Olivera por un seguro de decesos');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (3, 'Contrato de Martin Jon Olivera por un seguro de automóvil');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (4, 'Contrato de Aaron Galván por un seguro de decesos');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (5, 'Contrato de Sergio Domínquez por un seguro de defensa jurídica');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (6, 'Contrato de Helena Daniela Olvera por un seguro de defensa jurídica');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (7, 'Contrato de Marcos Oliver por un seguro de automóvil');
-insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (8, 'Contrato de Gracia Cantú por un seguro de automóvil');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (8, 'Contrato de Gracia Cantú por un seguro de asistencia de viaje');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (9, 'Contrato de Hilde Gaitán por un seguro de automóvil');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (10, 'Contrato de Marta Pedroza por un seguro de automóvil');
-insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (11, 'Contrato de Jon Sotelo por un seguro de automóvil');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (11, 'Contrato de Jon Sotelo por un seguro de asistencia de viaje');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (12, 'Contrato de Sergio Polo por un seguro de automóvil');
-insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (13, 'Contrato de Joel Mares por un seguro de ingeniería');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (13, 'Contrato de Joel Mares por un seguro de salud');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (14, 'Contrato de Pol Tirado por un seguro de multirriesgo');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (15, 'Contrato de Eva Rolón por un seguro de multirriesgo');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (16, 'Contrato de Dario Sepúlveda por un seguro de multirriesgo');
@@ -79,7 +80,7 @@ insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (38, 'Con
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (39, 'Contrato de Zula Aufderhar por un seguro de salud');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (40, 'Contrato de Stephanie Krajcik por un seguro de salud');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (41, 'Contrato de Emanuel Greenholt por un seguro de salud');
-insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (42, 'Contrato de Raul Grady por un seguro de dependencia');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (42, 'Contrato de Raul Grady por un seguro de automóvil');
 
 --REGISTRO_SINIESTRO
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
