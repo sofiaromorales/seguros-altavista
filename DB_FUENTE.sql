@@ -67,13 +67,14 @@ CREATE TABLE BI_FUENTE.REGISTRO_CONTRATO(
 );
 
 CREATE TABLE BI_FUENTE.REGISTRO_SINIESTRO(
-    nro_siniestro INT PRIMARY KEY NOT NULL,
     id_rechazo BOOLEAN NOT NULL,
     monto_reconocido INT NOT NULL,
     monto_solicitado INT NOT NULL,
     fecha_siniestro DATE NOT NULL,
     fecha_respuesta DATE NOT NULL,
-    nro_contrato INT NOT NULL
+    nro_siniestro INT NOT NULL,
+    nro_contrato INT NOT NULL,
+    PRIMARY KEY (nro_siniestro, nro_contrato)
 );
 
 CREATE TABLE BI_FUENTE.SINIESTRO(
@@ -152,10 +153,10 @@ ALTER TABLE BI_FUENTE.REGISTRO_SINIESTRO
     REFERENCES BI_FUENTE.CONTRATO (nro_contrato)
 ;
 
-ALTER TABLE BI_FUENTE.SINIESTRO
-    ADD CONSTRAINT fk_siniestro_nro_siniestro
+ALTER TABLE BI_FUENTE.REGISTRO_SINIESTRO
+    ADD CONSTRAINT fk_registro_siniestro_siniestro
     FOREIGN KEY (nro_siniestro)
-    REFERENCES BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro)
+    REFERENCES BI_FUENTE.SINIESTRO (nro_siniestro)
 ;
 
 ALTER TABLE BI_FUENTE.SUCURSAL

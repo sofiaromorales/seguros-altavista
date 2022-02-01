@@ -82,6 +82,23 @@ insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (40, 'Con
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (41, 'Contrato de Emanuel Greenholt por un seguro de salud');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (42, 'Contrato de Raul Grady por un seguro de automóvil');
 
+--SINIESTRO
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (1, 'Tratamiento de conducto con extracción de muela');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (2, 'Impacto lateral derecho por imprudencia de tercero');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (3, 'Reemplazo del tren delantero + limpieza de inyectores y valvúlas');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (4, 'Rayón en guardafango izq.');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (5, 'Retrasos en pagos de mensualidad al banco por prestamo vencido');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (6, 'Hospitalización por colíco nefritico');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (7, 'Resonancia magnetica de torax');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (8, 'Examenes post-operatorios + hospitalización');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (9, 'Destrucción de fachada provocado por la tormenta "La Loca"');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (10, 'Perdida de retrovisor izq. y der.');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (11, 'Retraso al momento de abordar el avión');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (12, 'Robo de instrumentos de limpieza del jardín');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (13, 'Daños al transporte provocados por antisociales y perdida de mercancia');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (14, 'Incendio del almacén principal que provocó daños en toda la zona este del establecimiento');
+insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (15, 'Fallecimiento del asegurado motivado a un ataque en el miocardio');
+
 --REGISTRO_SINIESTRO
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
     values (1,'21-10-2021' ,'15-01-2022' , true, 0, 200, 37);
@@ -113,23 +130,6 @@ insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_
     values (14,'15-03-2018' ,'07-01-2020' , true, 72500, 100000, 24);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
     values (15,'07-07-2019' ,'03-01-2021' , false, 50000, 50000, 30);
-
---SINIESTRO
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (1, 'Tratamiento de conducto con extracción de muela');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (2, 'Impacto lateral derecho por imprudencia de tercero');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (3, 'Reemplazo del tren delantero + limpieza de inyectores y valvúlas');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (4, 'Rayón en guardafango izq.');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (5, 'Retrasos en pagos de mensualidad al banco por prestamo vencido');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (6, 'Hospitalización por colíco nefritico');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (7, 'Resonancia magnetica de torax');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (8, 'Examenes post-operatorios + hospitalización');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (9, 'Destrucción de fachada provocado por la tormenta "La Loca"');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (10, 'Perdida de retrovisor izq. y der.');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (11, 'Retraso al momento de abordar el avión');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (12, 'Robo de instrumentos de limpieza del jardín');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (13, 'Daños al transporte provocados por antisociales y perdida de mercancia');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (14, 'Incendio del almacén principal que provocó daños en toda la zona este del establecimiento');
-insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (15, 'Fallecimiento del asegurado motivado a un ataque en el miocardio');
 
 --EVALUACION_SERVICO
 insert into BI_FUENTE.EVALUACION_SERVICIO (cod_evaluacion_servicio, nb_descripcion) values (1, 'malo');
