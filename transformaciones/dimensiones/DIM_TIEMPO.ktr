@@ -444,7 +444,7 @@
     <database>SEGUROS_ALTAVISTA</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce108fc0fc8e</password>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -526,12 +526,12 @@
     <hop>
       <from>Meses</from>
       <to>Renombrar</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Renombrar</from>
       <to>Dimension Tiempo</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>TIEMPO</from>
@@ -541,6 +541,26 @@
     <hop>
       <from>Trimestres 2</from>
       <to>Dias de la Semana</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Trimestres 2</from>
+      <to>Semestres</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Semestres</from>
+      <to>Dias de la Semana</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renombrar</from>
+      <to>Renombrar 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Renombrar 2</from>
+      <to>Dimension Tiempo</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1115,16 +1135,24 @@
         <stream_name>timedayofweekdesc</stream_name>
       </field>
       <field>
-        <column_name>desc_semectre</column_name>
+        <column_name>desc_dia_semana_corta</column_name>
+        <stream_name>timedayofweekshortdesc</stream_name>
+      </field>
+      <field>
+        <column_name>desc_mes</column_name>
         <stream_name>timemonthdesc</stream_name>
       </field>
       <field>
-        <column_name>desc_dia_semana_corta</column_name>
+        <column_name>desc_mes_corta</column_name>
         <stream_name>timemonthshortdesc</stream_name>
       </field>
       <field>
         <column_name>desc_trimestre</column_name>
         <stream_name>timequarter</stream_name>
+      </field>
+      <field>
+        <column_name>desc_semestre</column_name>
+        <stream_name>timehalf</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -1136,7 +1164,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
+      <xloc>784</xloc>
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1889,8 +1917,12 @@
         <rename>timemonthshortdesc</rename>
       </field>
       <field>
-        <name>Quarter</name>
+        <name>quarter</name>
         <rename>timequarter</rename>
+      </field>
+      <field>
+        <name>half</name>
+        <rename>timehalf</rename>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2027,6 +2059,350 @@
     <GUI>
       <xloc>336</xloc>
       <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Semestres</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <field_to_use>month</field_to_use>
+    <target_field>half</target_field>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>1</source_value>
+        <target_value>1</target_value>
+      </field>
+      <field>
+        <source_value>2</source_value>
+        <target_value>1</target_value>
+      </field>
+      <field>
+        <source_value>3</source_value>
+        <target_value>1</target_value>
+      </field>
+      <field>
+        <source_value>4</source_value>
+        <target_value>1</target_value>
+      </field>
+      <field>
+        <source_value>5</source_value>
+        <target_value>1</target_value>
+      </field>
+      <field>
+        <source_value>6</source_value>
+        <target_value>1</target_value>
+      </field>
+      <field>
+        <source_value>7</source_value>
+        <target_value>2</target_value>
+      </field>
+      <field>
+        <source_value>8</source_value>
+        <target_value>2</target_value>
+      </field>
+      <field>
+        <source_value>9</source_value>
+        <target_value>2</target_value>
+      </field>
+      <field>
+        <source_value>10</source_value>
+        <target_value>2</target_value>
+      </field>
+      <field>
+        <source_value>11</source_value>
+        <target_value>2</target_value>
+      </field>
+      <field>
+        <source_value>12</source_value>
+        <target_value>2</target_value>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Renombrar 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>timeid</name>
+        <rename>timeid</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timedate</name>
+        <rename>timedate</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timeyear</name>
+        <rename>timeyear</rename>
+        <type>None</type>
+        <length>4</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timemonth</name>
+        <rename>timemonth</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timedayofyear</name>
+        <rename>timedayofyear</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timedayofmonth</name>
+        <rename>timedayofmonth</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timedayofweek</name>
+        <rename>timedayofweek</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timeweekofyear</name>
+        <rename>timeweekofyear</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timedayofweekdesc</name>
+        <rename>timedayofweekdesc</rename>
+        <type>None</type>
+        <length>30</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timedayofweekshortdesc</name>
+        <rename>timedayofweekshortdesc</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timemonthdesc</name>
+        <rename>timemonthdesc</rename>
+        <type>None</type>
+        <length>30</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timemonthshortdesc</name>
+        <rename>timemonthshortdesc</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timequarter</name>
+        <rename>timequarter</rename>
+        <type>Integer</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>timehalf</name>
+        <rename>timehalf</rename>
+        <type>Integer</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
