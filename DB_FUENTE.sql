@@ -4,7 +4,7 @@ SET TIMEZONE = -4;
 
 CREATE SCHEMA IF NOT EXISTS BI_FUENTE;
 
-CREATE TYPE estados_contrato
+CREATE TYPE BI_FUENTE.estados_contrato
     AS ENUM ('activo', 'vencido', 'suspendido')
 ;
 
@@ -57,7 +57,7 @@ CREATE TABLE BI_FUENTE.RECOMIENDA(
 
 CREATE TABLE BI_FUENTE.REGISTRO_CONTRATO(
     monto INT NOT NULL,
-    estado_contrato estados_contrato NOT NULL,
+    estado_contrato BI_FUENTE.estados_contrato NOT NULL,
     fecha_inicio DATE NOT NULL,
     fecha_fin DATE NOT NULL,
     nro_contrato INT NOT NULL,
