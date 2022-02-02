@@ -81,6 +81,10 @@ insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (39, 'Con
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (40, 'Contrato de Stephanie Krajcik por un seguro de salud');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (41, 'Contrato de Emanuel Greenholt por un seguro de salud');
 insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (42, 'Contrato de Raul Grady por un seguro de automóvil');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (43, 'Contrato de Samson Gulgowski por un seguro de salud');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (44, 'Contrato de Marta Pedroza por un seguro de automóvil');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (45, 'Contrato de Marta Pedroza por un seguro de automóvil');
+insert into BI_FUENTE.CONTRATO (nro_contrato, descrip_contrato) values (46, 'Contrato de Sebastián Batista por un seguro de transportes');
 
 --SINIESTRO
 insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (1, 'Tratamiento de conducto con extracción de muela');
@@ -101,35 +105,35 @@ insert into BI_FUENTE.SINIESTRO (nro_siniestro, descripcion_siniestro) values (1
 
 --REGISTRO_SINIESTRO
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (1,'21-10-2021' ,'15-01-2022' , true, 0, 200, 37);
+    values (1,'21-01-2022' ,'30-01-2022' , true, 0, 200, 37);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (2,'01-05-2020' ,'15-09-2020' , false, 500, 500, 7);
+    values (2,'28-01-2022' ,'01-02-2020' , false, 500, 500, 7);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (3,'25-04-2021' ,'15-05-2021' , false, 600, 800, 8);
+    values (3,'25-07-2021' ,'15-10-2021' , false, 600, 800, 8);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (4,'03-01-2022' ,'26-01-2022' , false, 100, 100, 9);
+    values (4,'25-04-2021' ,'28-06-2021' , false, 100, 100, 9);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (5,'27-09-2019' ,'28-12-2019' , true, 0, 3000, 17);
+    values (5,'13-01-2022' ,'28-01-2022' , true, 0, 3000, 17);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (6,'15-08-2020' ,'11-10-2020' , false, 7000, 10000, 33);
+    values (6,'15-08-2021' ,'11-10-2021' , false, 7000, 10000, 33);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (7,'24-07-2021' ,'30-09-2021' , false, 80, 80, 34);
+    values (7,'24-04-2021' ,'30-08-2021' , false, 80, 80, 34);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (8,'14-02-2020' ,'05-05-2020' , false, 250, 500, 35);
+    values (8,'14-01-2022' ,'02-02-2022' , false, 250, 500, 35);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (9,'23-03-2021' ,'06-10-2021' , false, 18000, 20000, 13);
+    values (9,'23-12-2021' ,'15-01-2022' , false, 18000, 20000, 13);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (10,'01-12-2021' ,'27-12-2021' , false, 200, 200, 10);
+    values (10,'01-12-2020' ,'27-12-2020' , false, 200, 200, 10);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (11,'12-06-2018' ,'22-06-2018' , false, 25, 25, 1);
+    values (11,'12-01-2022' ,'01-02-2022' , false, 25, 25, 1);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (12,'04-11-2018' ,'13-12-2018' , true, 0, 100, 18);
+    values (12,'04-11-2020' ,'13-12-2020' , true, 0, 100, 10);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (13,'23-01-2019' ,'23-01-2021' , false, 15000, 25000, 22);
+    values (13,'23-07-2021' ,'23-12-2021' , false, 15000, 25000, 22);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (14,'15-03-2018' ,'07-01-2020' , true, 72500, 100000, 24);
+    values (14,'15-01-2022' ,'23-01-2022' , true, 72500, 100000, 24);
 insert into BI_FUENTE.REGISTRO_SINIESTRO (nro_siniestro, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado, nro_contrato)
-    values (15,'07-07-2019' ,'03-01-2021' , false, 50000, 50000, 30);
+    values (15,'07-01-2022' ,'11-01-2022' , false, 50000, 50000, 30);
 
 --EVALUACION_SERVICO
 insert into BI_FUENTE.EVALUACION_SERVICIO (cod_evaluacion_servicio, nb_descripcion) values (1, 'malo');
