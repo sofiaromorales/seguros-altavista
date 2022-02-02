@@ -569,7 +569,7 @@
     </partitioning>
     <connection>DESTINO</connection>
     <sql>
-SELECT ROW_NUMBER() OVER(), estado from unnest(enum_range(NULL::estados_contrato)) as estado;</sql>
+SELECT ROW_NUMBER() OVER(), estado from unnest(enum_range(NULL::bi_fuente.estados_contrato)) as estado;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -586,8 +586,8 @@ SELECT ROW_NUMBER() OVER(), estado from unnest(enum_range(NULL::estados_contrato
         <origin>Table input</origin>
         <comments>row_number</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -596,7 +596,7 @@ SELECT ROW_NUMBER() OVER(), estado from unnest(enum_range(NULL::estados_contrato
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_VE</date_format_locale>
         <date_format_timezone>America/Caracas</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -604,13 +604,13 @@ SELECT ROW_NUMBER() OVER(), estado from unnest(enum_range(NULL::estados_contrato
         <type>String</type>
         <storagetype>normal</storagetype>
         <name>estado</name>
-        <length>2147483647</length>
-        <precision>-1</precision>
+        <length>-1</length>
+        <precision>0</precision>
         <origin>Table input</origin>
         <comments>estado</comments>
         <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -619,7 +619,7 @@ SELECT ROW_NUMBER() OVER(), estado from unnest(enum_range(NULL::estados_contrato
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_VE</date_format_locale>
         <date_format_timezone>America/Caracas</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
