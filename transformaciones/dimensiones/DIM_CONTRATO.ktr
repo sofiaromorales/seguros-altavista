@@ -542,7 +542,7 @@
     <hop>
       <from>Table input</from>
       <to>Dimension lookup/update</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <step>
