@@ -128,5 +128,5 @@ CREATE TABLE BI_DIMENSIONAL.FACT_REGISTRO_SINIESTRO(
     monto_reconocido REAL,
     cantidad INT,
     monto_solicitado REAL,
-    id_rechazo BOOLEAN
+    id_rechazo CHAR(2)
 );
