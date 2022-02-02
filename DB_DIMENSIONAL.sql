@@ -124,6 +124,7 @@ CREATE TABLE BI_DIMENSIONAL.FACT_REGISTRO_SINIESTRO(
     sk_dim_tiempo_respuesta INT,
     sk_dim_tiempo_siniestro INT,
     sk_dim_contrato INT,
+    sk_dim_siniestro INT,
     monto_reconocido REAL,
     cantidad INT,
     monto_solicitado REAL,
