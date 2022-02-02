@@ -441,10 +441,10 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>SEGUROS_ALTAVISTA</database>
+    <database>${DB_name}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce108fc0fc8e</password>
+    <password>${DB_password}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -492,10 +492,10 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>SEGUROS_ALTAVISTA</database>
+    <database>${DB_name}</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce108fc0fc8e</password>
+    <password>${DB_password}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -542,7 +542,7 @@
     <hop>
       <from>Table input</from>
       <to>Dimension lookup/update</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <step>
